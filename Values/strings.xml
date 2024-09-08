@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">FinancePal</string>
+    <string-array name="category_array">
+        <item>Food</item>
+        <item>Transport</item>
+        <item>Medicine</item>
+        <item>Groceries</item>
+        <item>Entertainment</item>
+        <item>Income</item>
+        <item>Others</item>
+    </string-array>
+    <string name="icon_desc">Description of the icon</string>
+    <string name="description_text">Take control of your finances with ease—track, manage, and optimize your spending effortlessly with our Daily Expense Manager!</string>
+</resources>
