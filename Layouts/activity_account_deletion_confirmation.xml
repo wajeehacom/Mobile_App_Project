@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Delete Account Heading -->
+    <TextView
+        android:id="@+id/heading1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="Delete Account"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:textAlignment="center" />
+
+    <!-- Confirmation Text -->
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:text="Are you sure you want to delete your account?"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@id/heading1"
+        android:layout_centerHorizontal="true" />
+
+    <!-- Warning Message -->
+    <TextView
+        android:layout_width="272dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="By deleting your account, you agree that you understand the consequences of this action and that you agree to permanently delete your account and all associated data."
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        android:layout_below="@id/heading"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Button Layout at the bottom -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:layout_marginBottom="100dp"
+        android:layout_centerHorizontal="true">
+
+        <!-- Yes, Delete Account Button -->
+        <Button
+            android:id="@+id/btnDelete1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/rounded_button_background"
+            android:text="Yes, Delete Account"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:onClick="onDeleteAccountClick1"
+            android:layout_gravity="center_horizontal" />
+
+        <!-- Cancel Button -->
+        <Button
+            android:id="@+id/btnCancel1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button_background"
+            android:text="Cancel"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+</RelativeLayout>

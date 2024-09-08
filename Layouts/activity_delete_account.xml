@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/homepage"
+    android:padding="16dp">
+    <!-- LinearLayout for Icons and Text at the Top -->
+    <LinearLayout
+        android:id="@+id/linearLayoutIconsText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="120dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <!-- First Icon View -->
+        <ImageView
+            android:id="@+id/imageViewBackArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/back_arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:text="Delete Account"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/icon_notification" />
+
+    </LinearLayout>
+    <!-- Heading -->
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Are you sure you want to delete your account?"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:textAlignment="center"/>
+
+    <!-- Image with Overlay Text -->
+    <RelativeLayout
+        android:id="@+id/imageContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/heading"
+        android:layout_marginTop="50dp">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/rectangle" />
+
+        <!-- Overlay Text on Image -->
+        <TextView
+            android:layout_width="272dp"
+            android:layout_height="209dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="This action will permanently delete all of your data, and you will not be able to recover it. Please keep the following in mind before proceeding: \n\nAll your expenses, income, and associated transactions will be eliminated. \n\nYou will not be able to access your account or any related information. \n\nThis action cannot be undone."
+            android:textColor="@android:color/black"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <!-- Confirmation Text -->
+    <TextView
+        android:id="@+id/confirmationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:text="Please enter your password to confirm deletion of your account:"
+        android:textSize="16sp"
+        android:layout_marginTop="24dp"
+        android:layout_below="@id/imageContainer"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"/>
+
+    <!-- Password Field -->
+    <EditText
+        android:id="@+id/passwordField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/confirmationText"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:background="@drawable/rounded_edit_text_background"
+        android:padding="12dp"
+        android:layout_centerHorizontal="true"/>
+
+    <!-- Centered Buttons -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passwordField"
+        android:orientation="vertical"
+        android:layout_marginTop="24dp"
+        android:layout_centerHorizontal="true">
+
+        <!-- Yes, Delete Account Button -->
+
+        <!-- Cancel Button -->
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="187dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/green"
+            android:text="Yes, Delete Account"
+            android:textColor="@color/dark_green"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="187dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/green"
+            android:text="Cancel"
+            android:textColor="@color/dark_green"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</RelativeLayout>

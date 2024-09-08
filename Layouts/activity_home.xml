@@ -1,0 +1,366 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/homepage">
+
+    <!-- Greeting TextView -->
+    <TextView
+        android:id="@+id/textViewGreeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hi, Welcome Back"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:layout_margin="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <!-- Notification Icon -->
+
+    <ImageView
+        android:id="@+id/accountbalanceIcon"
+        android:layout_width="37dp"
+        android:layout_height="34dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/accountbalance" />
+
+    <ImageView
+        android:id="@+id/notificationIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:src="@drawable/icon_notification"
+        />
+
+    <!-- Buttons for daily, weekly, and monthly -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewGreeting"
+        android:layout_marginTop="31dp"
+        android:background="@color/green"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <!-- Vertical Layout for Total Balance -->
+        <!-- Vertical Divider -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewBalanceLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Balance:"
+                android:textAlignment="viewStart"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textViewBalanceAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rs.0.00"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="3dp"
+            android:background="@android:color/black" />
+        <!-- Space between two sections -->
+        <Space
+            android:layout_width="16dp"
+            android:layout_height="wrap_content" />
+
+
+        <!-- Vertical Layout for Total Expenses -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/black"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewExpensesLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Expenses:"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textViewExpensesAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rs. 0.00"
+                android:textColor="@color/medium_blue"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="362dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="200dp"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="30" />
+
+    <RelativeLayout
+        android:layout_width="330dp"
+        android:layout_height="153dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="280dp"
+        android:background="@drawable/rectangle3"
+        android:padding="16dp">
+
+        <!-- Savings Section -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true">
+
+            <ImageView
+                android:id="@+id/imageViewSavingsIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ellipse"
+                android:src="@drawable/car" />
+
+            <TextView
+                android:id="@+id/textViewSavings"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="70dp"
+                android:text="Savings on Goal"
+                android:textColor="@android:color/black"
+                android:textSize="10sp" />
+        </RelativeLayout>
+
+        <!-- Expenses and Food Section -->
+        <RelativeLayout
+            android:layout_width="202dp"
+            android:layout_height="128dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="12dp">
+
+            <ImageView
+                android:id="@+id/imageViewExpensesIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="110dp"
+                android:src="@drawable/salary" />
+
+            <TextView
+                android:id="@+id/textViewExpenseIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="85dp"
+                android:layout_marginTop="10dp"
+                android:text="Revenue Last Month:"
+                android:textAlignment="viewStart"
+                android:textColor="@android:color/black"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/textViewRevenueAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="95dp"
+                android:layout_marginTop="44dp"
+                android:text="Rs.0.00"
+                android:textAlignment="textEnd"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <!-- Vertical Divider -->
+            <View
+                android:layout_width="1dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="28dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/black" />
+
+
+            <ImageView
+                android:id="@+id/imageViewFoodIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/imageViewExpensesIcon"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="21dp"
+                android:layout_marginEnd="110dp"
+                android:src="@drawable/food" />
+
+            <TextView
+                android:id="@+id/textViewFoodIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="70dp"
+                android:text="Food Last Month:"
+                android:textAlignment="textEnd"
+                android:textColor="@android:color/black"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/textViewFoodAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="95dp"
+                android:layout_marginTop="90dp"
+                android:text="Rs.1000"
+                android:textAlignment="textEnd"
+                android:textColor="@color/medium_blue"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="300dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnDaily"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/green"
+            android:text="Daily" />
+
+        <Button
+            android:id="@+id/btnWeekly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/green"
+            android:text="Weekly"/>
+
+        <Button
+            android:id="@+id/btnMonthly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/green"
+            android:text="Monthly" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listViewExpenses"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottom_navigation"
+        android:layout_below="@id/textViewGreeting"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="500dp"/>
+
+
+    <!-- New LinearLayout for Clickable Icons -->
+    <LinearLayout
+        android:id="@id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:gravity="center">
+
+        <!-- Icon 1 -->
+        <ImageView
+            android:id="@+id/imageViewIcon1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:src="@drawable/home"
+            android:contentDescription="Icon 1"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- Space -->
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="wrap_content" />
+
+        <!-- Icon 3 -->
+        <ImageView
+            android:id="@+id/imageViewIcon3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:src="@drawable/transactions"
+            android:contentDescription="Icon 3"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- Space -->
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="wrap_content" />
+
+        <!-- Icon 4 -->
+        <ImageView
+            android:id="@+id/imageViewIcon4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:src="@drawable/category"
+            android:contentDescription="Icon 4"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- Space -->
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="wrap_content" />
+
+        <!-- Icon 5 -->
+        <ImageView
+            android:id="@+id/imageViewIcon5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:src="@drawable/profile"
+            android:contentDescription="Icon 5"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
+</RelativeLayout>

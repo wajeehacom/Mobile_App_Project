@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/expensebackground"
+    android:padding="16dp">
+    <!-- LinearLayout for Icons and Text at the Top -->
+    <LinearLayout
+        android:id="@+id/linearLayoutIconsText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="120dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <!-- First Icon View -->
+        <ImageView
+            android:id="@+id/imageViewBackArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/back_arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:text="Edit Profile"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/icon_notification" />
+
+    </LinearLayout>
+    <!-- Profile Image -->
+    <ImageView
+        android:id="@+id/profileImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/circle_shape"
+        android:padding="4dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/defualt_profile_image" />
+
+    <!-- User ID -->
+    <TextView
+        android:id="@+id/userId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profileImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="ID: 25030024"
+        android:textSize="14sp"
+        android:textColor="@android:color/black" />
+
+
+
+    <!-- Username Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/userId"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
+
+        <!-- Username Field Heading -->
+        <TextView
+            android:id="@+id/usernameHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Username"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Username Input Field -->
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_edit_text_background"
+            android:hint="Username"
+            android:padding="8dp"
+            android:textColor="@android:color/black" />
+
+        <!-- Phone Number Field Heading -->
+        <TextView
+            android:id="@+id/phoneNumberHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Phone Number"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Phone Number Input Field -->
+        <EditText
+            android:id="@+id/phoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_edit_text_background"
+            android:hint="Phone Number"
+            android:inputType="phone"
+            android:padding="8dp"
+            android:textColor="@android:color/black" />
+
+        <!-- Email Address Field Heading -->
+        <TextView
+            android:id="@+id/emailAddressHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Email Address"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Email Address Input Field -->
+        <EditText
+            android:id="@+id/emailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_edit_text_background"
+            android:hint="Email Address"
+            android:inputType="textEmailAddress"
+            android:padding="8dp"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+
+    <!-- Update Profile Button -->
+    <Button
+        android:id="@+id/updateProfileButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
+        android:text="Update Profile"
+        android:textColor="@color/dark_green"
+        android:backgroundTint="@color/green"
+        android:textSize="16sp" />
+</RelativeLayout>

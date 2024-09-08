@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="180dp"
+        app:tint="@color/green" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:fontFamily="cursive"
+        android:text="FinancePal!"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/green"
+        android:textSize="48sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/descriptionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="@string/description_text"
+        android:textColor="@color/dark_green"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:textAlignment="center"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:padding="40dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/descriptionText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:padding="15dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/green"
+            android:text="Login"
+            android:textColor="@color/dark_green" />
+
+        <Button
+            android:id="@+id/btnSignup"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/green"
+            android:text="Sign Up"
+            android:textColor="@color/dark_green" />
+    </LinearLayout>
+
+    <!-- Adjust this view to be centered vertically on the screen -->
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="-202dp"
+        android:layout_marginBottom="202dp" />
+</RelativeLayout>

@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp">
+
+    <!-- Delete Account Heading -->
+    <TextView
+        android:id="@+id/heading1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="End Session"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:textAlignment="center" />
+
+    <!-- Confirmation Text -->
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Are you sure you want to delete your account?"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@id/heading1"
+        android:layout_centerHorizontal="true" />
+
+
+
+    <!-- Button Layout at the bottom -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:layout_marginBottom="300dp"
+        android:layout_centerHorizontal="true">
+
+        <!-- Yes, Delete Account Button -->
+        <Button
+            android:id="@+id/btnEndSession"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/green"
+            android:text="Yes, End Session"
+            android:textColor="@color/dark_green"
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:onClick="onDeleteAccountClick1"
+            android:layout_gravity="center_horizontal" />
+
+        <!-- Cancel Button -->
+        <Button
+            android:id="@+id/btnCancelSession"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/green"
+            android:padding="10dp"
+            android:text="Cancel"
+            android:textColor="@color/dark_green"
+            android:onClick="onCancelSessionClick"
+
+            android:textSize="16sp" />
+    </LinearLayout>
+</RelativeLayout>
